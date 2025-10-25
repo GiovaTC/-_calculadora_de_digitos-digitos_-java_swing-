@@ -149,11 +149,11 @@ public class CalculadoraDigitosGUI extends JFrame {
         btn.setFont(new Font("Segoe UI", Font.PLAIN, 13));
         btn.setFocusPainted(false);
         btn.setBackground(new Color(100, 149, 237));
-        btn.setForeground(Color.WHITE);
-        btn.setBorder(BorderFactory.createEmptyBorder(8,12,8,12));
+        btn.setForeground(new Color(42, 42, 42)); // Texto oscuro 🖤
+        btn.setBorder(BorderFactory.createEmptyBorder(8, 12, 8, 12));
         return btn;
     }
-
+    
     private void agregarDesdeCampo() {
         String txt = inputField.getText().trim();
         if (txt.isEmpty()) return;
