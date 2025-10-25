@@ -1,15 +1,33 @@
-//TIP To <b>Run</b> code, press <shortcut actionId="Run"/> or
-// click the <icon src="AllIcons.Actions.Execute"/> icon in the gutter.
-public class Main {
-    public static void main(String[] args) {
-        //TIP Press <shortcut actionId="ShowIntentionActions"/> with your caret at the highlighted text
-        // to see how IntelliJ IDEA suggests fixing it.
-        System.out.printf("Hello and welcome!");
+import javax.swing.*;
+import javax.swing.border.EmptyBorder;
+import java.awt.*;
+import java.awt.event.*;
+import java.util.regex.Pattern;
 
-        for (int i = 1; i <= 5; i++) {
-            //TIP Press <shortcut actionId="Debug"/> to start debugging your code. We have set one <icon src="AllIcons.Debugger.Db_set_breakpoint"/> breakpoint
-            // for you, but you can always add more by pressing <shortcut actionId="ToggleLineBreakpoint"/>.
-            System.out.println("i = " + i);
-        }
+/**
+ * CalculadoraDigitosGUI
+ * Aplicación Swing que permite agregar números a una lista y mostrar
+ * paso a paso cada dígito multiplicado por sí mismo (n * n = resultado).
+ *
+ * Instrucciones:
+ * 1. javac CalculadoraDigitosGUI.java
+ * 2. java CalculadoraDigitosGUI
+ */
+
+public class CalculadoraDigitosGUI extends JFrame {
+
+    private DefaultListModel<String> listaModel;
+    private JList<String> listaNumeros;
+    private JTextArea salida;
+    private JTextField inputField;
+    private final Pattern multiSplit = Pattern.compile("[,\\s]+");
+
+    public CalculadoraDigitosGUI() {
+        setTitle("✨ Calculadora de Dígitos × Dígitos ✨");
+        setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        setSize(760, 520);
+        setLocationRelativeTo(null);
+        setLayout(new BorderLayout());
+        initUI();
     }
 }
